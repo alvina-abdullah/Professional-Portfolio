@@ -1,0 +1,6 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 10L20 10L25 25L30 10L40 10L30 30L20 30L10 10Z" fill="#FF00CC"/>
+  <path d="M45 10L55 10L55 30L45 30L45 10Z" fill="#9933FF"/>
+  <path d="M60 10L70 10L80 20L70 30L60 30L70 20L60 10Z" fill="#00CCFF"/>
+  <text x="85" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="white">Search Team</text>
+</svg>
