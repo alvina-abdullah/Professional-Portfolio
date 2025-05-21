@@ -10,9 +10,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { AnimatedSectionTitle } from "./animated-section-title"
+import { AnimatedSectionTitle } from "./Animated-section-title"
 
-export function ContactSection() {
+export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -90,14 +90,14 @@ export function ContactSection() {
           <ContactCard
             icon={<MapPin className="h-6 w-6 text-primary" />}
             title="Location"
-            content="San Francisco, CA"
+            content="Karachi, Pakistan"
             variants={itemVariants}
           />
 
           <ContactCard
             icon={<Mail className="h-6 w-6 text-primary" />}
             title="Email"
-            content="hello@johndoe.com"
+            content="alvinaabdullah16@gmail.com"
             variants={itemVariants}
           />
 
@@ -183,7 +183,7 @@ export function ContactSection() {
 
                 <Button type="submit" size="lg" className="w-full md:w-auto relative overflow-hidden group">
                   <span className="relative z-10">Send Message</span>
-                  <span className="absolute inset-0 bg-primary w-0 group-hover:w-full transition-all duration-300 ease-out" />
+                  <span className="absolute inset-0 bg-primary/80 w-0 group-hover:w-full transition-all duration-300 ease-out" />
                 </Button>
               </form>
             </CardContent>
