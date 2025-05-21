@@ -183,7 +183,7 @@ export function ContactSection() {
 
                 <Button type="submit" size="lg" className="w-full md:w-auto relative overflow-hidden group">
                   <span className="relative z-10">Send Message</span>
-                  <span className="absolute inset-0 bg-primary/80 w-0 group-hover:w-full transition-all duration-300 ease-out" />
+                  <span className="absolute inset-0 bg-primary w-0 group-hover:w-full transition-all duration-300 ease-out" />
                 </Button>
               </form>
             </CardContent>
