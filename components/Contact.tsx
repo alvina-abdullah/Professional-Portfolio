@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { AnimatedSectionTitle } from "./Animated-section-title"
+import { AnimatedSectionTitle } from "@/components/Animated-section-title"
 
 export function Contact() {
   const [formData, setFormData] = useState({
