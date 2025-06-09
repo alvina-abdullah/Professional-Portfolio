@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Code, PenTool } from "lucide-react"
-import WaveAnimation from "./wave-animation"
-import { FaCode, FaGraduationCap } from "react-icons/fa6";
+import WaveAnimation from "@/components/wave-animation"
+import { IoBookSharp } from "react-icons/io5";
 const education = [
   {
     id: 1,
     title: "Governor Sindh Initiative for GenAI, Web3, and Metaverse",
-    icon: <FaCode className="h-6 w-6 text-pink-600" />,
+    icon: <Code className="h-6 w-6 text-pink-500" />,
     items: [
       "Currently enrolled in the cutting-edge Web 3.0 program at GIAIC, I’m diving deep into the core technologies shaping the future of the internet.",
       "This immersive course is more than just a curriculum — it's a journey of hands-on learning, innovation, and creative exploration.",
@@ -20,7 +20,7 @@ const education = [
   {
     id: 2,
     title: "BanoQabil 2.0-Graphic Designing",
-    icon: <PenTool className="h-6 w-6 text-purple-800" />,
+    icon: <PenTool className="h-6 w-6 text-purple-500" />,
     items: ["Comprehensive Design Skills: Gained in-depth knowledge of design principles, including typography, color theory, layout, and composition, which are fundamental for creating visually appealing designs.",
        "Proficiency in Design Software: Developed expertise in industry-standard tools such as Adobe Photoshop, Illustrator, and InDesign to execute creative ideas and design projects efficiently.",
        "Hands-on Project Experience: Worked on various real-world projects, including logo design, social media posts, brochures, and promotional materials, strengthening practical design skills.",
@@ -31,7 +31,7 @@ const education = [
   {
     id: 3,
     title: "Intermediate in Computer Science.",
-    icon: <FaGraduationCap className="h-6 w-6 text-blue-700" />,
+    icon: <IoBookSharp className="h-6 w-6 text-blue-600" />,
     items: [
       "Currently enrolled in the Computer Science, where I am gaining a strong foundation in programming, algorithms, and data structures. This year, I am focusing on core subjects like C programming, discrete mathematics, and introductory computer systems, which are enhancing my problem-solving and analytical skills. I am passionate about expanding my knowledge in emerging technologies and preparing for a future in the tech industry.",
     ],

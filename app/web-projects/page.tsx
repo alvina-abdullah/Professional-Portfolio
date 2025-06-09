@@ -22,8 +22,18 @@ export default function WebProjects() {
       githubUrl: "https://github.com/alvina-abdullah/Inkshock-Design",
       liveUrl: "https://inshock-design.vercel.app",
     },
-    {
+        {
     id: 2,
+    title: "Qurbani Vibes",
+    description:
+     "A festive Eid-ul-Adha themed website featuring smooth scrolling, responsive design, and celebratory content presentation.",
+    image: "/qurbani-vibes.png?height=400&width=600",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    githubUrl: "https://github.com/alvina-abdullah/Eid-ul-adha",
+    liveUrl: "https://eid-ul-adha-bice.vercel.app/",
+  },
+    {
+    id: 3,
     title: "E-Commerce Platform",
     description:
       "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
@@ -33,22 +43,13 @@ export default function WebProjects() {
     liveUrl: "https://figma-hackathon-chi-five.vercel.app",
   },
     {
-      id: 3,
+      id: 4,
       title: "Agentia World",
       description: "A collaborative task management application with real-time updates and team functionality.",
       image: "/Agentia-web.png?height=400&width=600",
       tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       githubUrl: "https://github.com/alvina-abdullah/Agentia-World-",
       liveUrl: "https://agentia-world-topaz.vercel.app/",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing projects and skills with a modern design.",
-      image: "/portfolio.png?height=400&width=600",
-      tags: ["Html", "CSS", "Javascript"],
-      githubUrl: "https://github.com/alvina-abdullah/personal-portfolio-using-html-custom-css",
-      liveUrl: "https://alvina-abdullah.github.io/personal-portfolio-using-html-custom-css/",
     },
     {
       id: 5,
@@ -61,6 +62,15 @@ export default function WebProjects() {
     },
     {
       id: 6,
+      title: "Portfolio Website",
+      description: "A responsive portfolio website showcasing projects and skills with a modern design.",
+      image: "/portfolio.png?height=400&width=600",
+      tags: ["Html", "CSS", "Javascript"],
+      githubUrl: "https://github.com/alvina-abdullah/personal-portfolio-using-html-custom-css",
+      liveUrl: "https://alvina-abdullah.github.io/personal-portfolio-using-html-custom-css/",
+    },
+    {
+      id: 7,
       title: "Static Interactive Resume",
       description: "A responsive portfolio website showcasing projects and skills with a modern design.",
       image: "/resume.png?height=400&width=600",
@@ -69,7 +79,7 @@ export default function WebProjects() {
       liveUrl: "https://hackathon-1-portfolio.vercel.app/",
     },
     {
-      id: 7,
+      id: 8,
       title: "Simple Calculator",
       description: "A responsive portfolio website showcasing projects and skills with a modern design.",
       image: "/calculator.png?height=400&width=600",
@@ -78,7 +88,7 @@ export default function WebProjects() {
       liveUrl: "https://alvina-abdullah.github.io/Simple-Calculator/",
     },
     {
-      id: 8,
+      id: 9,
       title: "Rickshaw Hub",
       description: "A responsive portfolio website showcasing projects and skills with a modern design.",
       image: "/rickshaw.png?height=400&width=600",
@@ -87,7 +97,7 @@ export default function WebProjects() {
       liveUrl: "https://landing-page-using-tailwind-css-brown.vercel.app/",
     },
     {
-      id: 9,
+      id: 10,
       title: "Todo App",
       description: "A responsive portfolio website showcasing projects and skills with a modern design.",
       image: "/todo-app.png?height=400&width=600",
@@ -96,7 +106,7 @@ export default function WebProjects() {
       liveUrl: "https://alvina-abdullah.github.io/Todo-app/",
     },
     {
-      id: 10,
+      id: 11,
       title: "Counter App",
       description: "A responsive portfolio website showcasing projects and skills with a modern design.",
       image: "/counter-app.png?height=400&width=600",
@@ -105,7 +115,7 @@ export default function WebProjects() {
       liveUrl: "https://counter-app-three-sepia.vercel.app",
     },
     {
-      id: 11,
+      id: 12,
       title: "Countdown Timer",
       description: "A responsive portfolio website showcasing projects and skills with a modern design.",
       image: "/countdown-timer.png?height=400&width=600",
@@ -152,6 +162,7 @@ export default function WebProjects() {
 
   return (
     <section id="projects" className="py-16 md:py-24 container">
+          <p className="text-primary text-4xl mb-4 tracking-wider uppercase text-center font-extrabold ">My Projects</p>
       <AnimatedSectionTitle
         title="Web Projects"
         subtitle="Here are some of my recent projects. Each project is built with modern technologies and best practices."
@@ -177,7 +188,7 @@ export default function WebProjects() {
         viewport={{ once: true }}
       >
         <Button variant="outline" size="lg" asChild className="relative overflow-hidden group">
-          <Link href="/project" target="_blank" rel="noopener noreferrer">
+          <Link href="/web-projects" rel="noopener noreferrer">
             <span className="relative z-10">View All Projects</span>
             <span className="absolute inset-0 bg-primary/10 w-0 group-hover:w-full transition-all duration-300 ease-out" />
           </Link>
