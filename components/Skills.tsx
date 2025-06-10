@@ -161,7 +161,7 @@ function AnimatedSkill({ skill, index, inView }: { skill: any; index: number; in
           {progressValue}%
         </motion.span>
       </div>
-      <Progress value={progressValue} className="h-2" />
+      <Progress value={progressValue} className="h-2 " />
     </div>
   )
 }
