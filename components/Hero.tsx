@@ -17,7 +17,7 @@ export default function Hero() {
         <div className=" items-center">
           <div className="relative z-10">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center ">
                 <span className="text-white">I'am Alvina </span>
                 <br />
                 <span className="text-white/70">Web Developer +</span>
