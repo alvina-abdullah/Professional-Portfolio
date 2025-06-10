@@ -24,24 +24,24 @@ const graphicproject = [
     alt: "Youtube thumbnail",
     category: "Thumbnail",
   },
-  {
-    id: 4,
-    src: "/placeholder.svg?height=600&width=600",
-    alt: "Cocktail preparation",
-    category: "Drinks",
-  },
-  {
-    id: 5,
-    src: "/placeholder.svg?height=600&width=600",
-    alt: "Private dining area",
-    category: "Interior",
-  },
-  {
-    id: 6,
-    src: "/placeholder.svg?height=600&width=600",
-    alt: "Dessert plating",
-    category: "Food",
-  },
+  // {
+  //   id: 4,
+  //   src: "/placeholder.svg?height=600&width=600",
+  //   alt: "Cocktail preparation",
+  //   category: "Drinks",
+  // },
+  // {
+  //   id: 5,
+  //   src: "/placeholder.svg?height=600&width=600",
+  //   alt: "Private dining area",
+  //   category: "Interior",
+  // },
+  // {
+  //   id: 6,
+  //   src: "/placeholder.svg?height=600&width=600",
+  //   alt: "Dessert plating",
+  //   category: "Food",
+  // },
 ]
 
 export function GraphicProjects() {
