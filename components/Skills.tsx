@@ -5,7 +5,7 @@ import { Progress } from "@/components/ui/progress"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { useState, useEffect } from "react"
-import { AnimatedSectionTitle } from "./Animated-section-title"
+import { AnimatedSectionTitle } from "@/components/Animated-section-title"
 
 export function Skills() {
   const frontendSkills = [
