@@ -14,8 +14,8 @@ const education = [
   },
 {
   id: 2,
-  date: "Summer 2025 - Present | YouTube & Online Platforms",
-  title: "Self-Paced Front-End Learning",
+  date: "2025 - Present | YouTube & Online Platforms",
+  title: "Self-Placed Front-End Learning",
   description: `Actively learning front-end development through YouTube tutorials and online platforms. Focused on HTML, CSS, JavaScript, and React to build responsive, user-friendly interfaces. Creating real-world projects to apply concepts practically. This self-paced journey is sharpening my skills in modern web development.`,
 },
   {
