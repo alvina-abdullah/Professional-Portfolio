@@ -68,7 +68,7 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <Button asChild className="btn-gradient text-white px-6 py2 text-center rounded-full transition-all duration-300">
-              <Link href="https://acrobat.adobe.com/id/urn:aaid:sc:ap:c9d862cb-4bec-418c-8260-db6218546bdc" target="_blank" rel="noopener noreferrer">
+              <Link href="/myresume.jpg" target="_blank" rel="noopener noreferrer">
                 Resume<ExternalLink className="ml-1 h-4 w-6 text-center" />
               </Link>
             </Button>
@@ -111,7 +111,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <Link
-                  href="https://acrobat.adobe.com/id/urn:aaid:sc:ap:c9d862cb-4bec-418c-8260-db6218546bdc"
+                  href="/myresume.jpg"
                   className="btn-gradient text-white px-6 py-2 rounded-full transition-all duration-300 text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
