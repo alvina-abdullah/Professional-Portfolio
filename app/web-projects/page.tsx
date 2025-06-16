@@ -162,9 +162,9 @@ export default function WebProjects() {
 
   return (
     <section id="projects" className="py-16 md:py-24 container">
-          <p className="text-primary text-4xl mb-4 tracking-wider uppercase text-center font-extrabold ">My Projects</p>
+          <p className="text-primary text-4xl mb-4 tracking-wider uppercase text-center font-extrabold ">Portfolio</p>
       <AnimatedSectionTitle
-        title="Web Projects"
+        title="My Projects"
         subtitle="Here are some of my recent projects. Each project is built with modern technologies and best practices."
       />
 
