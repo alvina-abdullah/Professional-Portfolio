@@ -64,7 +64,7 @@ export default function Home() {
       <Hero/>
       <About/>
       <WebProjects/>
-      <GraphicProjects/>
+      {/* <GraphicProjects/> */}
       <Skills/>
       <Education/>
       {/* <StepsSection/> */}

@@ -11,7 +11,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Skills", href: "/skills" },
   { name: "Education", href: "/education" },
-  { name: "Graphic Projects", href: "/graphic-projects" },
+  // { name: "Graphic Projects", href: "/graphic-projects" },
   { name: "Web Projects", href: "/web-projects" },
   { name: "Contact", href: "/contact" },
 ]
@@ -39,8 +39,8 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
             <Link href="/" className="flex items-center">
-              <div className="relative h-10 w-40">
-                <p className="py-2 font-extrabold text-2xl" >Portfolio</p> 
+              <div className="relative h-10 w-52">
+                <p className="py-2 font-extrabold text-2xl" >Alvina Abdullah</p> 
               </div>
             </Link>
           </motion.div>

@@ -162,14 +162,14 @@ export default function WebProjects() {
 
   return (
     <section id="projects" className="py-16 md:py-24 container">
-          <p className="text-primary text-4xl mb-4 tracking-wider uppercase text-center font-extrabold ">My Projects</p>
+          <p className="text-primary text-4xl mb-4 tracking-wider uppercase text-center font-extrabold ">Portfolio</p>
       <AnimatedSectionTitle
-        title="Web Projects"
+        title="My Projects"
         subtitle="Here are some of my recent projects. Each project is built with modern technologies and best practices."
       />
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

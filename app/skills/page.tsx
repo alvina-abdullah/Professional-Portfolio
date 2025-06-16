@@ -165,3 +165,4 @@ function AnimatedSkill({ skill, index, inView }: { skill: any; index: number; in
     </div>
   )
 }
+export default Skills

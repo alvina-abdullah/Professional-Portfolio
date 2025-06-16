@@ -187,12 +187,12 @@ export default function WebProjects() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <Button variant="outline" size="lg" asChild className="relative overflow-hidden group">
+        {/* <Button variant="outline" size="lg" asChild className="relative overflow-hidden group">
           <Link href="/web-projects" rel="noopener noreferrer">
             <span className="relative z-10">View All Projects</span>
             <span className="absolute inset-0 bg-primary/10 w-0 group-hover:w-full transition-all duration-300 ease-out" />
           </Link>
-        </Button>
+        </Button> */}
       </motion.div>
     </section>
   )

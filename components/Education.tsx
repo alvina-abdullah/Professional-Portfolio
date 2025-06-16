@@ -1,118 +1,142 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Code, PenTool } from "lucide-react"
-import WaveAnimation from "@/components/wave-animation"
-import { IoBookSharp } from "react-icons/io5";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import WaveAnimation from "@/components/wave-animation";
+
 const education = [
   {
     id: 1,
+    date: "Feb 2024 - Ongoing | GIAIC",
     title: "Governor Sindh Initiative for GenAI, Web3, and Metaverse",
-    icon: <Code className="h-6 w-6 text-pink-500" />,
-    items: [
-      "Currently enrolled in the cutting-edge Web 3.0 program at GIAIC, I’m diving deep into the core technologies shaping the future of the internet.",
-      "This immersive course is more than just a curriculum — it's a journey of hands-on learning, innovation, and creative exploration.",
-      "In the first quarter, I laid a strong foundation by mastering the building blocks of web development: HTML, CSS, and TypeScript.",
-      "Now advancing into the second quarter, I’m expanding my toolkit with powerful modern frameworks like Next.js and Tailwind CSS, and experimenting with Framer Motion to bring interfaces to life."
-    ],
-    color: "from-pink-500 to-purple-600",
+   description: `Currently enrolled in the cutting-edge Web 3.0 program at GIAIC, I’m diving deep into the core technologies shaping the future of the internet. This immersive journey blends hands-on learning with innovation and creativity. I began by mastering HTML, CSS, and TypeScript, and now I’m advancing with Next.js, Tailwind CSS, and Framer Motion to craft dynamic, modern interfaces.`,
+
   },
-  {
-    id: 2,
-    title: "BanoQabil 2.0-Graphic Designing",
-    icon: <PenTool className="h-6 w-6 text-purple-500" />,
-    items: ["Comprehensive Design Skills: Gained in-depth knowledge of design principles, including typography, color theory, layout, and composition, which are fundamental for creating visually appealing designs.",
-       "Proficiency in Design Software: Developed expertise in industry-standard tools such as Adobe Photoshop, Illustrator, and InDesign to execute creative ideas and design projects efficiently.",
-       "Hands-on Project Experience: Worked on various real-world projects, including logo design, social media posts, brochures, and promotional materials, strengthening practical design skills.",
-       "Creative Portfolio Development: Built a diverse portfolio showcasing my design abilities, which serves as a foundation for my professional career in graphic design."
-      ],
-    color: "from-purple-500 to-indigo-600",
-  },
+{
+  id: 2,
+  date: "Summer 2025 - Present | YouTube & Online Platforms",
+  title: "Self-Paced Front-End Learning",
+  description: `Actively learning front-end development through YouTube tutorials and online platforms. Focused on HTML, CSS, JavaScript, and React to build responsive, user-friendly interfaces. Creating real-world projects to apply concepts practically. This self-paced journey is sharpening my skills in modern web development.`,
+},
   {
     id: 3,
-    title: "Intermediate in Computer Science.",
-    icon: <IoBookSharp className="h-6 w-6 text-blue-600" />,
-    items: [
-      "Currently enrolled in the Computer Science, where I am gaining a strong foundation in programming, algorithms, and data structures. This year, I am focusing on core subjects like C programming, discrete mathematics, and introductory computer systems, which are enhancing my problem-solving and analytical skills. I am passionate about expanding my knowledge in emerging technologies and preparing for a future in the tech industry.",
-    ],
-    color: "from-blue-500 to-cyan-600",
+    date: "2025 | KMA Girls Degree College, Karachi",
+    title: "Intermediate in Computer Science",
+    description: `Currently enrolled in the Computer Science, where I am gaining a strong foundation in programming, algorithms, and data structures. This year, I am focusing on core subjects like C programming, discrete mathematics, and introductory computer systems, which are enhancing my problem-solving and analytical skills. I am passionate about expanding my knowledge in emerging technologies and preparing for a future in the tech industry.`,
   },
-]
+  {
+  id: 4,
+  date: "2024 | BanoQabil 3.1 BootCamp",
+  title: "Web Development",
+  description: `Completed an intensive web development bootcamp focused on HTML, CSS, and modern UI design. Gained hands-on experience in creating responsive websites and user-friendly layouts. Learned to build structured, clean code with a strong emphasis on design consistency. This program enhanced my practical skills and understanding of front-end web development.`,
+},
+    {
+    id: 5,
+    date: "2023 | BanoQabil 2.0",
+    title: "Graphic Designing",
+    description: `I have developed a strong foundation in graphic design, mastering key principles like typography, color theory, and composition. I’m proficient in industry-standard tools such as Adobe Photoshop, Illustrator, and InDesign. Through hands-on projects, I’ve created logos, brochures, and social media designs that reflect real-world experience. My growing portfolio showcases my creativity and readiness for a professional design career.`,
+  },
+  {
+    id: 6,
+    date: "2023 | Al-Makhdoom Public School, Karachi ",
+    title: "Matriculation",
+    description: `Completed my matriculation with a focus on biology and science subjects.Built a strong foundation in science and mathematics during matriculation, achieving excellent academic results. Actively participated in school clubs, science fairs, and administration duties, which strengthened my leadership, communication, and teamwork skills.`,
+  },
+];
 
-export default function Education() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
     },
-  }
+  },
+};
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
     },
-  }
+  },
+};
+
+export default function EducationTimeline() {
+  const ref = useRef(null);
+
+  // Scroll progress hook
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"], // when it enters and leaves the screen
+  });
+
+  // Animate line height from 0% to 100%
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="education" className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section
+      id="education"
+      className="relative py-20 text-white overflow-hidden"
+    >
+      {/* Top blur wave */}
+      <div className="absolute top-0 left-0 w-full h-20 opacity-30 blur-2xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="relative">
-              Education
-              <span className="absolute -bottom-2 left-0 w-full h-2">
-                <WaveAnimation />
-              </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+            Education
+            <span className="absolute -bottom-2 left-0 w-full h-2">
+              <WaveAnimation />
             </span>
           </h2>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {education.map((service, index) => (
-            <motion.div key={index} variants={itemVariants} className="service-card rounded-xl p-6 h-full">
-              <div
-                className={`bg-gradient-to-r ${service.color} p-3 rounded-lg inline-flex items-center justify-center mb-6`}
-              >
-                {service.icon}
-              </div>
-              <h3 className="text-2xl font-bold mb-6 text-white">{service.title}</h3>
+        {/* Timeline */}
+        <div ref={ref} className="relative ml-6">
+          {/* Scroll-based animated vertical line */}
+          <motion.div
+            style={{ height: lineHeight }}
+            className="absolute left-[-22px] top-0 w-1 bg-white origin-top"
+          />
 
-              {Array.isArray(service.items) ? (
-                <ul className="space-y-3">
-                  {service.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-pink-500 mr-2">•</span>
-                      <span className="text-gray-300">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-gray-300">{service.items}</p>
-              )}
-            </motion.div>
-          ))}
-        </motion.div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative"
+          >
+            {education.map((edu) => (
+              <motion.div
+                key={edu.id}
+                variants={itemVariants}
+                className="mb-12 relative"
+              >
+                <div className="absolute w-4 h-4 bg-[#9647eb] border-4 border-white rounded-full left-[-30px] top-2 shadow-lg shadow-blue-400/40"></div>
+                <h3 className="text-xl font-semibold">{edu.title}</h3>
+                <span className="text-sm text-gray-300">{edu.date}</span>
+                <p className="mt-2 text-gray-300 leading-relaxed">
+                  {edu.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
+
+      {/* Bottom blurred wave */}
+      <div className="absolute bottom-0 left-0 w-full h-40 opacity-30 blur-2xl pointer-events-none" />
     </section>
-  )
+  );
 }
