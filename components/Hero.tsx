@@ -20,7 +20,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center lg:px-32">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-center lg:px-32">
                 {/* <span className="text-white">I'am Alvina </span>
                 <br />
                 <span className="text-white/70">Web Developer +</span>
